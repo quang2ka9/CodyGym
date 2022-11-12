@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soThuTu = prompt("moi ban nhap chuc nang")
+    if (Number(soThuTu) === 1) {
+        let r = prompt('moi nhap ban kinh');
+        let c = Math.PI * r * 2
+        document.writeln('chu vi cua hinh tron la: ' + c)
+        document.writeln('chu vi cua hinh tron la: ' + c)
+    } else if (Number(soThuTu) === 2) {
+        let r = prompt("moi nhap ban kinh");
+        let s = Number(r * r) * 3.14
+        document.write('dien tich cua hinh tron la' + s)
+    } else if (Number(soThuTu) === 3) {
+        let celsius = prompt("moi nhap do C");
+        let fahrenheit = (9 * (Number(celsius) / 5) + 32);
+        document.write('nhiet do doi sang do f' + fahrenheit)
+    } else if (Number(soThuTu) === 4) {
+        let diemvatly = prompt("Mời nhập điểm vatly");
+        let diemhoahoc = prompt("Mời nhập điểm hoahoc");
+        let diemsinhhoc = prompt("Mời nhập điểm sinhhoc");
+        let diemTrungBinh = (Number(diemvatly) + Number(diemhoahoc) + Number(diemsinhhoc)) / 3;
+        document.write('diem trung binh' + diemTrungBinh)
+    }
+
+</script>
+</body>
+</html>

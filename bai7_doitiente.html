@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input name="" type="text" id="money"/>
+        </td>
+        <td>
+            <select name="" id="tiente">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+            </select>
+        </td>
+        <td>
+            <select name="" id="tiente1">
+                <option value="1">VND</option>
+                <option value="23000">USD
+                <option>
+            </select>
+        </td>
+        <td><button onclick="lamgido()">Chuyển</button></td>
+        <td><input type="text" readonly id="result"></td>
+    </tr>
+    <script>
+       function lamgido(){
+           let money = +document.getElementById('money').value;
+           let tiente = +document.getElementById('tiente').value;
+           let tiente1 = +document.getElementById('tiente1').value;
+           let result = money * tiente / tiente1;
+           document.getElementById('result').value = result;
+       }
+    </script>
+</table>
+</body>
+</html>
