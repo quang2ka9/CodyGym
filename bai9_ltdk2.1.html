@@ -1,10 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let soThuTu = prompt("moi ban nhap chuc nang")
+    if (Number(soThuTu) === 1) {
+        let c = prompt("nhap do c");
+        let f = c * 9 / 5 + 32
+        document.write('chuyen do c sang do f:' + f)
+    }
+    else if (Number(soThuTu) === 2){
+        let b = prompt("nhap gia tri cua met");
+        let ft = b*3.2808
+        document.write('chuyen do m sang do ft:' + ft);
+    }
+    else if (Number(soThuTu) === 3){
+        let a =prompt("nhap canh cua hinh vuong");
+        let sv = a*a
+        document.write('dieen tich cua hinh vuong la:' + sv);
+    }
+    else if (Number(soThuTu) === 4){
+        let a = prompt('nhap chieu dai');
+        let b = prompt('nhap chieu rong');
+        let scn = a*b
+        document.write('dien tich cua chu nhat la:' + scn);
+    }
+    else if(Number(soThuTu) === 5){
+        let a = prompt("canh ke thu nhat");
+        let b = prompt("canh ke thu hai");
+        let stg = a*b/2
+        document.write('dien tich cua tam giac vuong la:' + stg);
+    }
+    else if(Number(soThuTu) === 6){
+        let a = Number(prompt("gia tri cua a"))
+        let b = Number(prompt("gia tri cua b"));
+
+        if (a === 0 && b === 0){
+            alert('Phương trình vô số nghiệm');
+        }
+        else if (a !== 0 && b === 0){
+            alert('Phương trình có nghiệm x = 0');
+        }
+        else if (a === 0 && b !== 0){
+            alert("Phương trình vô nghiệm");
+        }
+        else {
+            alert('Phương trình có nghiệm x = ' + (-b/a));
+        }
+    }
+    else if(Number(soThuTu) === 7){
+        let a = prompt("gia tri cua a");
+        let b = prompt("gia tri cua b");
+        let c = prompt("gia tri cua c");
+        let delta = b*b - 4*a*c
+        if (delta<0){
+            alert("phuong trinh vo nghiem");
+        }
+        else if (delta===0){
+            alert('Phương trình có nghiệm x = ' + (-b/2*a));
+        }
+        else if (delta>0){
+            alert('Phương trình có nghiệm x1 = ' + (-b + Math.sqrt(delta))/(2*a));
+            alert('Phương trình có nghiệm x2 = ' + (-b - Math.sqrt(delta))/(2*a));
+        }
+    }
+    else if(Number(soThuTu) === 8){
+        let a =prompt("nhap tuoi cua mot nguoi");
+        if(a>0 && a<120){
+            alert("day la so tuoi cua mot nguoi")
+        }
+    }
+    else if(Number(soThuTu) === 9){
+        let a = prompt("canh thu nhat cua tam giac");
+        let b = prompt("canh thu hai cua tam giac");
+        let c = prompt("canh thu ba cua tam giac");
+        if(Number(a) + Number(b) > Number(c) && Number(a) + Number(c) > Number(b) && Number(c) + Number(b) > Number(b)){
+            alert("a,b,c la canh cua tam giac");
+        }
+    }
+</script>
 </body>
 </html>

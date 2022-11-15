@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soThuTu = prompt("moi ban nhap chuc nang")
+    if (Number(soThuTu) === 1) {
+        for (let i = 1; i <= 100; i++) {
+            document.write(i + "<br>")
+            if (i === 99) {
+                alert("Xin chúc mừng")
+            }
+        }
+    }
+    else if (Number(soThuTu) === 2){
+        let x = prompt("moi nhap nhiet do hien tai");
+        if( x< 20){
+            alert("yeu cau tang nhiet do");
+        }
+        else if(x>100){
+            alert("yeu cau giam nhiet do");
+        }
+        else{
+            alert("nhiet do binh thuong");
+        }
+    }
+    else if (Number(soThuTu) === 3){
+        let f = 0 ,f0= 0, f1=0
+        let fibonacci = "";
+        for (let i=0; i<20;i++){
+            if(i===0){
+                f=1
+                f1=1
+                fibonacci +=f+ " "
+            }else{
+
+                f= f0+f1
+                f0 = f1
+                f1 =f
+                fibonacci += f+ " "
+                console.log(i +" = "+f)
+            }
+        }
+        document.write(fibonacci)
+    }
+    else if (Number(soThuTu) === 4){
+        let f = 0, f0 = 0, f1 = 0
+        let chia5 = "";
+        let fibonacci = "";
+        for (let i = 0; i < 20; i++) {
+            if (i === 0) {
+                f = 1
+                f1 = 1
+                fibonacci += f + ""
+            } else {
+                f = f0 + f1
+                f0 = f1
+                f1 = f
+                fibonacci += f + ""
+                console.log(i + "=" + f)
+                if (f % 5 === 0) {
+                    chia5 = f
+                    break;
+                }
+            }
+        }
+        document.write("Sô chia hết cho 5 trong dãy là " + chia5)
+    }
+    else if (Number(soThuTu) === 5){
+        let f = 0, f0 = 0, f1 = 0, tong = 0
+        let fibonacci = "";
+        for (let i = 0; i < 20; i++) {
+            if (i === 0) {
+                f = 1
+                f1 = 1
+                fibonacci += f + ""
+                tong += f
+            } else {
+                f = f0 + f1
+                f0 = f1
+                f1 = f
+                fibonacci += f + ""
+                tong += f
+                console.log(i + " = " + f)
+            }
+        }
+        document.write("day fibonacci la " + fibonacci + "<br>")
+        document.write("tong cua cac so = " + tong)
+    }
+    else if (Number(soThuTu) === 6){
+        let count = 0, tong =0
+        let dayso =""
+        for (let i=1; ; i++){
+            if(i%7===0){
+                dayso += i+" "
+                console.log(dayso)
+                tong += i
+                count++
+                if(count===30) break
+            }
+        }
+        document.write(dayso+"<br>")
+        document.write("Tổng bằng "+tong)
+    }
+    else if (Number(soThuTu) === 7){
+        document.write("hay viet mot chuong trinh in ra cac so thu tu 1 den 100. nhung neu chia het cho 3 thi in ra \"Fizz\", 5 thi in ra \"Buzz\" thay vi in ra so đo. va neu so do chia het cho ca 3 va 5 thi in ra chu \"FizzBuzz\".<br>")
+        for (let i=1; i<=100; i++){
+            if(i%3===0 && i%5===0){
+                document.write(i+" FizzBuzz <br>")
+            }else{
+                if(i%3===0){
+                    document.write(i+ "Fizz<br>")
+                }
+                else if(i%5===0){
+                    document.write(i+"Buzz<br>")
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

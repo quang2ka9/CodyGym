@@ -6,10 +6,96 @@
 </head>
 <body>
 <script>
-  let a = prompt("so phut da su dung");
-  if(a<2){
-      alert()
-  }
+    let soThuTu = prompt("moi ban nhap chuc nang")
+    if (Number(soThuTu) === 1){
+        let a = prompt("nhap vao a");
+        let b = prompt("nhap vao b");
+        if(Number(a) % Number(b)===0){
+            alert("chia het")
+        } else{
+            alert("khong chia het")
+        }
+    }
+    else if (Number(soThuTu) === 2){
+        let age = prompt("nhap tuoi cua hoc sinh");
+        if ((age>15) && (age<18)){
+            alert("hoc sinh du dieu kien vao lop 10");
+        }else{
+            alert("khong du dieu kien vao lop 10")
+        }
+    }
+    else if (Number(soThuTu) === 3){
+        let a =prompt("so nguyen bat ky");
+        if(Number(a)>0){
+            alert("la so lon hon 0");
+        }else{
+            alert("la so be hon 0");
+        }
+    }
+        else if (Number(soThuTu) === 4){
+        let a =prompt("nhap a");
+        let b =prompt("nhap b");
+        let c =prompt("nhap c");
+        if(Number(a)>Number(b) && Number(a)>Number(c)){
+            alert("a la so lon nhat");
+        }
+        else if(Number(b)>Number(a) && Number(b)>Number(c)){
+            alert("b la so lon nhat");
+        }
+        else  if(Number(c)>Number(a) && Number(c)>Number(b)){
+            alert("c la so on nhat");
+        }
+        else if(Number(a)===Number(b) > Number(c)){
+            alert("a va b la so lon nhat");
+        }
+        else if(Number(a)===Number(c) > Number(b)){
+            alert("a va c la so lon nhat");
+        }
+        else if(Number(c)===Number(b) > Number(a)){
+            alert("c va b la so lon nhat");
+        }
+        else if(Number(c)===Number(b) < Number(a)){
+            alert("a la so lon nhat");
+        }
+        else if(Number(a)===Number(b) < Number(c)){
+            alert("c la so lon nhat");
+        }
+        else if(Number(c)===Number(a) < Number(b)){
+            alert("b la so lon nhat");
+        }
+        else if(Number(a)===Number(b) && Number(b)===Number(c)){
+            alert("abc bang nhau");
+        }
+    }
+        else if (Number(soThuTu) === 5){
+        let a = prompt("diem giua ki");
+        let b = prompt("diem cuoi ki");
+        let tb= (a+b)/2;
+        if(tb>8 && tb<10){
+            alert("hoc sinh gioi");
+        }
+        else if(tb>6 && tb<7){
+            alert("hoc sinh kha");
+        }
+        else if(tb>4 && tb<5) {
+            alert("hoc sinh TB");
+        }else{
+            alert("hoc sinh kem")
+        }
+    }
+        else if(Number(soThuTu) === 5){
+        let a = prompt("doanh thu ban hang");
+        if(a<10){
+            alert("hoa hong khong cong them ")
+        }
+        else if(a>11 && a<20){
+            alert("hoa hong cong them 10%")
+        }
+        else{
+            alert("hoa hong cong them 15%")
+        }
+    }
+
 </script>
 </body>
 </html>
