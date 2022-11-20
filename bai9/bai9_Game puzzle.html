@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    img{
+        width: 500px;
+        height: 200px;
+        box-shadow: 10px 10px;
+    }
+</style>
+</head>
+<body>
+<img onclick="changeImg(1)" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" id="part1">
+</br>
+<img onclick="changeImg(2)" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg" id="part2">
+</br>
+<img onclick="changeImg(3)" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg" id="part3">
+</br>
+<img onclick="changeImg(4)" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg" id="part4">
+</br>
+<img onclick="changeImg(5)" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg" id="part5">
+</br>
+</body>
+<script>
+    let part1 = ['http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg']
+    let part2 = ['http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg']
+    let part3 = ['http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg']
+    let part4 = ['http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg']
+    let part5 = ['http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg', 'http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg'];
+    let imgpos = [0,0,0,0,0];
+    function changeImg(id){
+        let newId = "part" + id;
+        let img = document.getElementById(newId);
+        let pos = imgpos[id - 1] + 1;
+        let random =  pos > 2 ? 0 : pos;
+        if(id === 1){
+            img.src = part1[random];
+            imgpos[0] = random;
+        }else if(id === 2){
+            img.src = part2[random];
+            imgpos[1] = random;
+        }else if(id === 3){
+            img.src = part3[random];
+            imgpos[2] = random;
+        }else if(id === 4){
+            img.src = part4[random];
+            imgpos[3] = random;
+        }else {
+            img.src = part5[random];
+            imgpos[4] = random;
+        }
+        let isTrue = true;
+        for(let i = 0; i < 4; i++){
+            if(imgpos[i] !== imgpos[i+1]){
+                isTrue = false;
+                break;
+            }
+        }
+        if(isTrue){
+            for (let i = 1; i <= 5; i ++){
+                console.log( document.getElementById('part' + i))
+                document.getElementById('part' + i).style.boxShadow = '10px 10px red';
+            }
+        }else{
+            for (let i = 1; i <= 5; i ++){
+                document.getElementById('part' + i).style.boxShadow = '10px 10px black';
+            }
+        }
+    }
+</script>
+</body>
+</html>

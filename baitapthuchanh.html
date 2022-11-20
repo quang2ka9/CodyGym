@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>//in ra cac thanh phan trong mang
+let hung = [2, 7, 1, 4, 8, 3, 2, 10, 15, 18]
+document.write(hung)
+//in ra các phần tử trong mảng, mỗi phần tử trong 1 thẻ h1
+let hung = [2, 7, 1, 4, 8, 3, 2, 10, 15, 18]
+for (let i = 0; i < hung.length; i++)
+    document.write(("<h1>" + hung[i] + "</h1>"))
+//in ra các phần tử chia hết cho 3 trong h1
+let hung = [2, 7, 1, 4, 8, 3, 2, 10, 15, 18]
+let a
+for (let i = 0; i < hung.length; i++) {
+    if (hung[i] % 3 === 0) {
+        a = "<h1>" + hung[i] + "</h1>"
+        document.write(a)
+    }
+}
+//in ra cac phan tu chia het cho 3 trong h3,chia het cho 5 trong h2, chia het cho 3 va 5 trong h1;
+let hung = [2, 7, 1, 4, 8, 3, 2, 10, 15, 18]
+for (let i = 0; i < hung.length; i++) {
+    if (hung[i] % 3 === 0) {
+        document.write("<h3>" + hung[i] + "</h3>");
+    }
+    else if(hung[i]%5===0){
+        document.write("<h2>" + hung[i] + "</h2>")
+    }
+    else if(hung[i]%3===0 && hung[i]%5===0){
+        document.write("<h1>" + hung[i] + "</h1>")
+    }
+}
+//tính các tổng phần tử trong mảng
+let hung = [2, 7, 1, 4, 8, 3, 2, 10, 15, 18]
+let tong = 0
+for (let i = 0; i < hung.length; i++)
+    tong += hung[i]
+document.write(tong)
+//tính các tích phần tử trong mảng
+let hung = [2, 7, 1, 4, 8, 3, 2, 10, 15, 18]
+let tich=1
+for (let i = 0; i < hung.length; i++)
+    tich *= hung[i]
+document.write(tich)
+//đếm số các phần tử chẵn
+let hung = [2, 7, 1, 4, 8, 3, 10, 15, 18]
+for (let i = 0; i < hung.length; i++){
+    if (hung[i]%2===0)
+        document.write(hung[i])
+}
+//TBC các phần tử chẵn
+let tong = 0
+let dem = 0
+let hung = [2, 7, 1, 4, 8, 3, 10, 15, 18]
+for (let i = 0; i < hung.length; i++){
+    if (hung[i]%2===0){
+        tong =tong +hung[i]
+        dem++
+    }
+}
+document.write(tong/dem)
+//tìm max trong mảng
+let hung = [2, 7, 1, 4, 8, 3, 10, 15, 18];
+let max = hung[0];
+for (let i = 0; i < hung.length; i++){
+    if(hung[i]>max){
+        max=hung[i];
+    }
+}
+document.write("max:" + max)
+//nhập vào a, tìm vị trí của a trong bảng
+let a = Number(prompt("nhap vao gia tri:  "));
+let hung = [2, 7, 1, 4, 8, 3, 10, 15, 18];
+for (let i = 0; i < hung.length; i++) {
+    if (a === hung[i]) {
+        alert("gia tri" + hung[i] + "tim thay tai" + i);
+    }
+}
+</script>
+</body>
+</html>

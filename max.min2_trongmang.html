@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Second_Greatest_Lowest(arr)
+    {
+        arr.sort(function(x,y)
+        {
+            return x-y;
+        });
+        let teo = [arr[0]];
+        let quang = [];
+
+        for(let j=1; j < arr.length; j++)
+        {
+            if(arr[j-1] !== arr[j])
+            {
+                teo.push(arr[j]);
+            }
+        }
+        quang.push(teo[1],teo[teo.length-2]);
+        return quang.join(',');
+    }
+
+    document.write(Second_Greatest_Lowest([1,17,16,9,34,15]));
+</script>
+</body>
+</html>

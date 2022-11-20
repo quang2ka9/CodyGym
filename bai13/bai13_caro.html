@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caro Game Simple</h1>
+<div id="gameBoard"></div>
+<button onclick="changeValue()">Change Value</button>
+<hr>
+</body>
+<script>
+    // Buoc 1: Tao ma tran n dong va m cot
+    let n = +prompt("So dong cua ma tran");
+    let m = +prompt("So cot cua ma tran");
+    let gameMatrix = [];
+    for(let i = 0; i < n; i++){
+        gameMatrix[i] = [];
+        for(let j = 0; j < m; j++){
+            gameMatrix[i][j] = 0;
+        }
+    }
+    // Buoc 2: In ma tran ra man hinh
+    let matrix = ''
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < m; j++){
+            matrix += gameMatrix[i][j] + " ";
+        }
+        matrix += "<br>";
+    }
+    document.getElementById('gameBoard').innerHTML = matrix;
+    function changeValue(){
+        // buoc 3: Thay doi gia tri cua o minh can danh
+        let x = +prompt("x?");
+        let y = +prompt("y?");
+        gameMatrix[x][y] = 'x';
+        // Buoc 4: In lai ma tran sau khi danh
+        let matrix = ''
+        for(let i = 0; i < n; i++){
+            for(let j = 0; j < m; j++){
+                matrix += gameMatrix[i][j] + " ";
+            }
+            matrix += "<br>";
+        }
+        document.getElementById('gameBoard').innerHTML = matrix;
+
+    }
+
+
+
+</script>
+</body>
+</html>

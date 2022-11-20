@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tính giai thừa của một số nguyên dương
+        let so = Number(prompt("nhap mot so de tinh giai thua"))
+        let giai_thua = 1
+        if (so === 0 || so === 1) {
+            giai_thua = 1;
+        } else if (so < 0) {
+            alert("Error!")
+        } else {
+            for (let i = 1; i <= so; i++) {
+                giai_thua = giai_thua * i
+            }
+        }
+        document.write("giai thua cua " + so + " = " + giai_thua)
+
+    //In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
+        for (let i = 0; i<5; i++){
+            for (let j=0;j<=i;j++){
+                let sao = "*"
+                document.write(sao)
+            }
+            document.write("<br>")
+        }
+        document.write("<br><br>")
+        for (let i = 5; i>0; i--){
+            for (let j=0;j<i;j++){
+                let sao = "*"
+                document.write(sao)
+            }
+            document.write("<br>")
+        }
+        document.write("<br><br>")
+        document.write("<div style='width: 50px' align='right'>")
+        for (let i = 0; i<5; i++){
+            for (let j=0;j<=i;j++){
+                let sao = "*"
+                document.write(sao)
+                //
+            }
+            document.write("<br>")
+        }
+        document.write("</div><br><br>")
+        document.write("<div style='width: 50px' align='right'>")
+        for (let i = 5; i>0; i--){
+            for (let j=0;j<i;j++){
+                let sao = "*"
+                document.write(sao)
+            }
+            document.write("<br>")
+        }
+        document.write("</div>")
+    //In hình chữ nhật
+    let a = " "
+    for (let i=0;i<=10;i++){
+        for (let j = 0;j<=30;j++){
+            if (i === 0 || i === 10){
+                document.write("<a style='color: red'>*<a>")
+            }else{
+                document.write("<a style='color: white'>*<a>")
+            }
+            if (j === 0 || j=== 30) {
+                document.write("<a style='color: red'>*<a>")
+            }
+        }
+        document.write("<br>")
+    }
+    //Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    let sotien = Number(prompt("nhap so tien gui ngan hang lai suat 5%/nam"))
+    let sothang =Number(prompt("nhap so thang gui"))
+    let tongtienlai = tienlai_thang
+    document.write("so tien ban gui la "+sotien +" VND trong "+ sothang+" thang voi lai suat 5%/ nam"+"<br>")
+    for (let i =0; i<sothang;i++){
+        tienlai_thang += tienlai_thang
+        sotien +=tienlai_thang
+        document.write("tien lai thang "+(i+1)+" là "+tienlai_thang.toFixed(0)+" VND<br>")
+    }
+    document.write("tong tien lai cua ban trong "+sothang+" la "+tongtienlai.toFixed(0)+" VND")
+</script>
+</body>
+</html>
