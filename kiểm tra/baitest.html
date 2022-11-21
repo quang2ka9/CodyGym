@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // Nhập từ bàn phím một dãy số nguyên gồm n phần tử, in ra màn hình
+    let arr= [];
+let n = +prompt("Nhap so phan tu cua mang");
+for(let i=0; i< n; i++){
+    let a = +prompt("nhap so nguyen");
+    arr.push(a);
+}
+    document.write(arr);
+
+
+//Viết hàm in ra các giá trị max của mảng
+    let arr= [];
+    let n = +prompt("Nhap so phan tu cua mang");
+    for(let i=0; i<n; i++){
+        let a = +prompt("nhap so nguyen");
+        arr.push(a);
+    }
+    let max=arr[0];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    document.write(arr)
+    document.write("so lon nhat la "+max)
+
+    
+    //Tìm số lớn thứ 2 của mảng
+    let arr= [];
+    let n = +prompt("Nhap so phan tu cua mang");
+    for(let i=0; i< n; i++){
+        let a = +prompt("nhap so nguyen");
+        arr.push(a);
+    }
+    function Second_Greatest_Lowest(arr)
+    {
+        arr.sort(function(x,y)
+        {
+            return x-y;
+        });
+        let teo = [arr[0]];
+        let quang = [];
+
+        for(let j=1; j < arr.length; j++)
+        {
+            if(arr[j-1] !== arr[j])
+            {
+                teo.push(arr[j]);
+            }
+        }
+        quang.push(teo[teo.length-2]);
+        return quang.join(',');
+    }
+    document.write(Second_Greatest_Lowest(arr));
+</script>
+</html>
