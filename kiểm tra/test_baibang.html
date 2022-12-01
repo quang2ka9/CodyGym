@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>fizzbuzz</title>
+  <title>Title</title>
+  <style>
+    th,td{
+      border: 1px solid black; border-collapse: collapse
+    }
+  </style>
 </head>
 <body>
-<table style="border-collapse: collapse ; border: 1px solid" >
+<table style="border: 1px solid black; border-collapse: collapse">
   <tr>
-    <th colspan="5">Kết Quả Học Tập</th>
+    <th colspan="5">KẾT QUẢ HỌC TẬP</th>
   </tr>
-  <tr >
-    <th class="lop">Họ Tên Học Sinh</th>
-    <th class="lop" colspan="2" >Năm Sinh</th>
-    <th class="lop">Điểm Trung Bình</th>
-    <th class="lop">Xếp Loại</th>
+  <tr style ="background-color: chartreuse">
+    <th rowspan="2">Họ và tên HS</th>
+    <th colspan="2">Năm Sinh</th>
+    <th rowspan="2">Điểm TB</th>
+    <th rowspan="2">Xếp Loại</th>
   </tr>
-  <tr class="lop">
-    <td></td>
-    <th class="lop">Nam</th>
-    <th class="lop">Nữ</th>
-    <td></td>
-    <td></td>
+  <tr style ="background-color: chartreuse">
+    <th>Nam</th>
+    <th>Nữ</th>
   </tr>
   <tr>
     <td>Lê Thanh Xuân</td>
     <td></td>
-    <td>1988</td>
+    <td>1998</td>
     <td>8.5</td>
     <td>Giỏi</td>
   </tr>
@@ -41,7 +43,7 @@
     <td></td>
     <td>1991</td>
     <td>9.5</td>
-    <td>Xuất Xắc</td>
+    <td>Xuất Sắc</td>
   </tr>
   <tr>
     <td>Trương Lưu Đông</td>
@@ -51,28 +53,16 @@
     <td>Trung Bình</td>
   </tr>
   <tr>
-    <td>Nguyễn Trung Thực</td>
+    <td>Nguyễn trung Trực</td>
     <td>1988</td>
     <td></td>
     <td>4.5</td>
     <td>Kém</td>
   </tr>
-  <tr >
-    <th class="lop" colspan="3">Tổng Số Học Sinh Đạt</th>
-    <th class="lop" colspan="2">4 Học Sinh</th>
+  <tr style ="background-color: chartreuse">
+    <th colspan="3">Tổng số học sinh đạt</th>
+    <th colspan="2">4 Học sinh</th>
   </tr>
-  <style>
-    tr, th, td {
-      border-collapse: collapse;
-      border: 1px solid;
-      text-align: center;
-    }
-    .lop{
-      background-color: yellow;
-    }
-  </style>
-
 </table>
-
 </body>
 </html>

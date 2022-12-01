@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+    //cách 1
     function Second_Greatest_Lowest(arr)
     {
         arr.sort(function(x,y)
@@ -27,6 +28,19 @@
     }
 
     document.write(Second_Greatest_Lowest([1,17,16,9,34,15]));
+    //cách 2
+    let a = [1, 23, 5, 6, 8, 11]
+    let max1 = a[0];
+    let max2 = a[1];
+    for (let i = 0; i < a.length; i++) {
+        if (max1 < a[i]) {
+            max2 = max1;
+            max1 = a[i];
+        } else if (max2 < a[i] && max1 != a[i]) {
+            max2 = a[i];
+        }
+    }
+    document.write(max2)
 </script>
 </body>
 </html>
