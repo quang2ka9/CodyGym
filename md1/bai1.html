@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function testScore(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    let tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+            for (let k = 0; k < arr.length; k++) {
+                document.write(arr[k] + ',')
+            }
+            document.write('<br>');
+            document.write('diem thi cao thu 3: ' + arr[arr.length - 3]);
+        }
+    }
+    let arr2 = [9, 37, 25, 32, 89, 1];
+    testScore(arr2);
+</script>
+
+</body>
+</html>
